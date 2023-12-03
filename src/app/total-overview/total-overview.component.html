@@ -1,0 +1,25 @@
+<div
+  [ngClass]="darkTheme ? 'dark-theme-overview' : 'light-theme-overview'"
+  class="total-main-container"
+>
+  <div [ngStyle]="{ background: bgColor }" class="color-container"></div>
+  <div class="total-main">
+    <div class="user-name-container">
+      <img src="{{ imgSrc }}" alt="icon" class="icon" />
+      <span>{{ id }}</span>
+    </div>
+    <div class="rating-container">
+      <span class="followers">{{ subCount }}</span>
+      <span class="followers-label">{{ subLabel }}</span>
+      <div class="rating">
+        <img src="{{ icon }}" alt="icon-up" />
+        <span
+          [ngStyle]="{
+            color: todayLabelColor
+          }"
+          >{{ todaySub }}</span
+        >
+      </div>
+    </div>
+  </div>
+</div>

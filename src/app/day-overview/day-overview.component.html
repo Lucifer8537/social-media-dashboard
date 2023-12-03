@@ -1,0 +1,22 @@
+<div
+  [ngClass]="darkTheme ? 'dark-theme-overview' : 'light-theme-overview'"
+  class="day-main-container"
+>
+  <div class="action-platform-container">
+    <span class="action">{{ action }}</span>
+    <img src="{{ imgSrc }}" alt="icon" />
+  </div>
+  <div class="count-perc-container">
+    <span class="count">{{ count }}</span>
+    <div class="perc-container">
+      <img src="{{ icon }}" alt="icon" />
+      <span
+        [ngStyle]="{
+          color: percColor
+        }"
+        class="perc"
+        >{{ perc }}</span
+      >
+    </div>
+  </div>
+</div>
